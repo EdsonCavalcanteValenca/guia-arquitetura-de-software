@@ -1,0 +1,98 @@
+---
+title: "Arquitetura Cliente-Servidor"
+subtitle: "Guia de Arquitetura de Software"
+author: "Edson Cavalcante Valença & Matheus Emanuel"
+format: revealjs
+---
+
+## O que é a Arquitetura Cliente-Servidor?
+
+- Modelo de computação distribuída
+- Divisão em dois papéis principais: **Cliente** e **Servidor**
+- Comunicação via rede através de protocolos padrão (ex: HTTP, TCP/IP)
+
+---
+
+## O Papel do Cliente
+
+- Solicita serviços ou recursos
+- Responsável pela apresentação e interface com o utilizador
+- Processamento local focado na experiência do utilizador
+
+---
+
+## O Papel do Servidor
+
+- Fornece serviços e gere recursos partilhados
+- Processa dados, regras de negócio e persistência
+- Atende a múltiplos clientes simultaneamente
+
+---
+
+## Fluxo de Requisição e Resposta
+
+1. Cliente envia um pedido (*Request*)
+2. Rede transporta a mensagem até ao servidor
+3. Servidor processa a requisição e valida regras
+4. Servidor devolve uma resposta (*Response*)
+
+---
+
+## Tipos de Clientes: Magro (*Thin Client*)
+
+- Lógica de negócio e processamento concentrados no servidor
+- O cliente apenas exibe a interface gráfica
+- **Exemplo:** Páginas web estáticas e terminais de dados
+
+---
+
+## Tipos de Clientes: Gordo (*Thick/Fat Client*)
+
+- Grande parte do processamento é feito na máquina local
+- Menor dependência do servidor para operações de UI
+- **Exemplo:** Aplicações desktop e jogos locais com sincronização
+
+---
+
+## Estado da Conexão: *Stateless*
+
+- O servidor não guarda estado entre requisições
+- Cada pedido deve conter toda a informação necessária
+- Facilita o escalamento horizontal do servidor
+
+---
+
+## Estado da Conexão: *Stateful*
+
+- O servidor mantém a sessão e o estado do cliente
+- Útil para fluxos contínuos e contextos persistentes
+- Dificulta a escalabilidade em grandes volumes
+
+---
+
+## Vantagens da Arquitetura
+
+- **Centralização:** Gestão e controlo de dados centralizados
+- **Segurança:** Políticas de acesso aplicadas diretamente no servidor
+- **Manutenção:** Atualizações no servidor beneficiam todos os clientes
+
+---
+
+## Desvantagens e Desafios
+
+- **Ponto Único de Falha:** Se o servidor falhar, o serviço fica indisponível
+- **Gargalos de Desempenho:** Sobrecarga com muitas requisições simultâneas
+- **Custos de Infraestrutura:** Servidores robustos exigem maior investimento
+
+---
+
+## Trade-offs e Análise Técnica
+
+{{< include _trade-offs.md >}}
+
+---
+
+## Conclusão e Padrões Modernos
+
+- Base de arquiteturas modernas (APIs REST, WebSockets, Microserviços)
+- Essencial para a construção de sistemas distribuídos e escaláveis

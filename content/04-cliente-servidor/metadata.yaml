@@ -1,0 +1,38 @@
+numero: "04"
+slug: "cliente-servidor"
+titulo: "Arquitetura Cliente-Servidor"
+resumo: "Divisão de responsabilidades entre provedores e solicitantes de serviços em sistemas distribuídos."
+status: "concluido"
+licenca: "CC BY-NC 4.0"
+
+autores:
+  - nome: "Edson Cavalcante Valença"
+    github: "EdsonCavalcanteValenca"
+  - nome: "Matheus Emanuel"
+
+palavras_chave:
+  - "cliente-servidor"
+  - "client-server"
+  - "sistemas-distribuidos"
+  - "requisicao-resposta"
+  - "arquitetura-de-software"
+
+competencias:
+  - "Avaliar a viabilidade da arquitetura Cliente-Servidor"
+  - "Projetar a divisão clara de responsabilidades entre clientes e servidores"
+  - "Identificar gargalos de desempenho e falhas comuns em sistemas centralizados"
+
+formatos:
+  texto: true
+  slides: true
+  notebook:
+    entregue: true
+    colab_url: "https://colab.research.google.com/"
+  audio_notebooklm:
+    entregue: true
+    url: "https://notebooklm.google.com/"
+    transcricao: "Resumo em áudio do tópico Arquitetura Cliente-Servidor."
+  gem_gemini:
+    entregue: true
+    url: "https://gemini.google.com/"
+    instrucoes: "Assistente virtual especialista na arquitetura Cliente-Servidor."
