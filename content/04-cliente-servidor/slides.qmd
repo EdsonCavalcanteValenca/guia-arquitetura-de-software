@@ -5,6 +5,14 @@ author: "Edson Cavalcante Valença & Matheus Emanuel"
 format: revealjs
 ---
 
+## O Problema: A Necessidade de Compartilhamento
+
+- Modelos anteriores oscilavam entre a extrema centralização de *mainframes* e estações isoladas
+- Desafios marcados por fragmentação, duplicação de dados e alto custo para compartilhar informações
+- Crescente **necessidade de compartilhamento de recursos e serviços** entre computadores conectados em rede
+
+---
+
 ## O que é a Arquitetura Cliente-Servidor?
 
 - Modelo de computação distribuída
@@ -35,6 +43,43 @@ format: revealjs
 2. Rede transporta a mensagem até ao servidor
 3. Servidor processa a requisição e valida regras
 4. Servidor devolve uma resposta (*Response*)
+
+---
+## Estrutura e Comunicação
+
+```{mermaid}
+%%| label: fig-estrutura-cliente-servidor-slides
+%%| fig-cap: "Fluxo de comunicação entre clientes, servidor e banco de dados central."
+flowchart TD
+    subgraph Clientes ["Aplicações Cliente (Solicitantes)"]
+        C1[Cliente Web / Browser]
+        C2[App Mobile]
+        C3[Aplicação Desktop]
+    end
+
+    subgraph Servidor ["Camada Servidora (Provedora)"]
+        S[Servidor de Aplicação / API]
+        DB[(Banco de Dados Central)]
+    end
+
+    C1 -->|1. Requisição de Serviço| S
+    C2 -->|1. Requisição de Serviço| S
+    C3 -->|1. Requisição de Serviço| S
+
+    S -->|2. Validação e Negócio| S
+    S -->|3. Consulta/Escrita| DB
+    DB -->|4. Retorna Dados| S
+    S -->|5. Resposta Estruturada| C1
+    S -->|5. Resposta Estruturada| C2
+    S -->|5. Resposta Estruturada| C3
+```
+---
+
+## Responsabilidades e Restrições
+
+- **Acesso Mediado:** Os clientes nunca acedem diretamente aos dados ou à base de dados, utilizando sempre as interfaces expostas pelo servidor.
+- **Validação no Servidor:** Operações sensíveis, regras de negócio e verificações de segurança devem ser executadas no servidor, já que o ambiente do cliente é não confiável.
+- **Controle de Recursos:** Centralização estrita da gestão de permissões, autenticação e integridade transacional na camada servidora.
 
 ---
 
