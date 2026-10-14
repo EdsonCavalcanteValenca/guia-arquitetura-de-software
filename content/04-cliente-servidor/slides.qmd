@@ -83,6 +83,14 @@ flowchart TD
 
 ---
 
+## Consequências Mensuráveis da Violação
+
+- **Corrupção de Dados:** Acesso direto permite gravar registros inválidos (como quantidades negativas ou estoques estourados) sem passar por nenhuma regra de negócio.
+- **Falhas de Concorrência:** Múltiplas conexões paralelas disputando o acesso ao banco geram erros de contenção severos (*database locked*).
+- **Perda de Integridade:** A quebra do modelo de acesso mediado compromete a consistência e a segurança de todo o sistema.
+
+---
+
 ## Tipos de Clientes: Magro (*Thin Client*)
 
 - Lógica de negócio e processamento concentrados no servidor
