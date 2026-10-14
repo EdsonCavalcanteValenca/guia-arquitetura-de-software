@@ -1,4 +1,4 @@
-numero: "04"
+numero: "05"
 slug: "cliente-servidor"
 titulo: "Arquitetura Cliente-Servidor"
 resumo: "Divisão de responsabilidades entre provedores e solicitantes de serviços em sistemas distribuídos."
