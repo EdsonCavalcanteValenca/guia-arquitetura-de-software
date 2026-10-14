@@ -27,12 +27,12 @@ formatos:
   slides: true
   notebook:
     entregue: true
-    colab_url: "https://colab.research.google.com/"
-  audio_notebooklm:
+    colab_url: "https://colab.research.google.com/github/IFPE-BeloJardim-ES/guia-arquitetura-de-software/blob/main/content/04-cliente-servidor/notebook.ipynb"
+  audio_notebooklm:"Comunicação com o notebook.ipynb."
     entregue: true
-    url: "https://notebooklm.google.com/"
-    transcricao: "Resumo em áudio do tópico Arquitetura Cliente-Servidor."
+    url: "https://github.com/IFPE-BeloJardim-ES/guia-arquitetura-de-software/blob/main/content/04-cliente-servidor/_trade-offs.md"
+    transcricao: "Análise detalhada de trade-offs técnicos e de infraestrutura da arquitetura Cliente-Servidor."
   gem_gemini:
     entregue: true
-    url: "https://gemini.google.com/"
-    instrucoes: "Assistente virtual especialista na arquitetura Cliente-Servidor."
+    url: "https://github.com/IFPE-BeloJardim-ES/guia-arquitetura-de-software/blob/main/content/04-cliente-servidor/slides.qmd"
+    instrucoes: "Apresentação de Slides do projeto atual."
