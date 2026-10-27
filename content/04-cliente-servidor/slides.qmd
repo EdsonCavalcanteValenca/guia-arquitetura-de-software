@@ -45,6 +45,7 @@ format: revealjs
 4. Servidor devolve uma resposta (*Response*)
 
 ---
+
 ## Estrutura e Comunicação
 
 ```{mermaid}
@@ -73,6 +74,7 @@ flowchart TD
     S -->|5. Resposta Estruturada| C2
     S -->|5. Resposta Estruturada| C3
 ```
+
 ---
 
 ## Responsabilidades e Restrições
