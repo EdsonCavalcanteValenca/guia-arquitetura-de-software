@@ -86,6 +86,7 @@ Embora o modelo Cliente-Servidor admita variações estruturais — como as **ar
 Ao descrever a estrutura de sistemas modernos, é fundamental destacar os **riscos do acoplamento inadequado**:
 - Permitir que clientes web ou móveis acessem diretamente a camada de dados (banco de dados) sem uma API intermediária expõe credenciais de acesso sensíveis e regras de negócio corporativas a sérios riscos críticos de segurança e vulnerabilidades estruturais [@sommerville2019engenharia].
 - É uma prática arquitetural altamente inadequada delegar exclusivamente ao cliente validações de segurança, restrições de integridade ou regras de negócio essenciais sem qualquer verificação posterior ou intermediada no servidor, já que o ambiente de execução do cliente é inerentemente hostil e considerado não confiável.
+
 ## Exemplo aplicado
 
 Para ilustrar a aplicação prática deste modelo, considere um sistema de gerenciamento de pedidos e controle de estoque de um e-commerce.
