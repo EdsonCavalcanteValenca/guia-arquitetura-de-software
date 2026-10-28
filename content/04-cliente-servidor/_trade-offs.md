@@ -1,4 +1,3 @@
-::: {.smaller}
 | Atributo | Efeito | Por quê |
 |---|---|---|
 | **Gerenciamento Centralizado** | Favorecido | Regras de negócio, dados e segurança residem no servidor, permitindo atualizações sem redistribuição de código nos clientes. |
@@ -8,4 +7,3 @@
 | **Disponibilidade** | Comprometida | O servidor centralizado representa um Ponto Único de Falha (*Single Point of Failure*). |
 | **Desempenho e Latência** | Comprometido | Cada interação via rede introduz latência superior ao processamento local. |
 | **Simplicidade Operacional** | Comprometida | Exige gestão de infraestrutura de rede e balanceamento. |
-:::
