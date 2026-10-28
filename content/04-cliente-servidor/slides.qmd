@@ -141,7 +141,7 @@ flowchart TD
 
 ---
 
-## Trade-offs e Análise Técnica
+## Trade-offs e Análise Técnica {.smaller}
 
 {{< include _trade-offs.md >}}
 
