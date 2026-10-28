@@ -2,7 +2,9 @@
 title: "Arquitetura Cliente-Servidor"
 subtitle: "Guia de Arquitetura de Software"
 author: "Edson Cavalcante Valença & Matheus Emanuel"
-format: revealjs
+format:
+  revealjs:
+    auto-stretch: false
 ---
 
 ## O Problema: A Necessidade de Compartilhamento
@@ -141,9 +143,52 @@ flowchart TD
 
 ---
 
-## Trade-offs e Análise Técnica {.smaller}
+## Trade-offs e Análise Técnica
 
+<style>
+.slide-tradeoffs table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  font-size: 0.45em !important;
+  margin-top: 10px !important;
+}
+
+.slide-tradeoffs th {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 10px 14px !important;
+  text-align: left !important;
+  border: none !important;
+}
+
+.slide-tradeoffs td {
+  padding: 8px 14px !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  vertical-align: middle !important;
+  color: #334155 !important;
+}
+
+.slide-tradeoffs tr:nth-child(even) td {
+  background-color: #f8fafc !important;
+}
+
+.slide-tradeoffs tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
+
+.slide-tradeoffs tr:last-child td {
+  border-bottom: none !important;
+}
+</style>
+
+::: {.slide-tradeoffs}
 {{< include _trade-offs.md >}}
+:::
 
 ---
 
