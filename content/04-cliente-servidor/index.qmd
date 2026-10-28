@@ -97,11 +97,11 @@ Para ilustrar a aplicação prática deste modelo, considere um sistema de geren
    - **Vulnerabilidade de Segurança:** As credenciais de acesso ao banco de dados ficam expostas via engenharia reversa do pacote do aplicativo cliente.
    - **Esgotamento de Recursos:** Centenas de conexões simultâneas diretas esgotam rapidamente o pool de conexões do banco de dados.
    - **Inconsistência de Dados:** Falta de validação centralizada e controle de concorrência adequado para múltiplos usuários.
-:::
+
 
 ## Exemplo executável
 O notebook interativo deste tópico está disponível em [`notebook.ipynb`](notebook.ipynb) e pode ser aberto diretamente no [Google Colab](https://colab.research.google.com/). Ele demonstra a implementação de um servidor de sockets/HTTP em Python e simula requisições simultâneas de múltiplos clientes.
-:::
+
 
 ## Trade-offs
 
