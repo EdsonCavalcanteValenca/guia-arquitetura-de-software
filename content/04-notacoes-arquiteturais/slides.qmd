@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Notações Arquiteturais"
 subtitle: "Guia de Arquitetura de Software"
@@ -64,30 +63,37 @@ flowchart TD
     CEN <--> VD
     CEN <--> VP
     CEN <--> VF
+```
 
-Modelo C4: Mapas com Zoom Arquitetural
-Criado por Simon Brown para simplificar a comunicação visual de sistemas [@brown2018visualising]
+---
 
-Estrutura hierárquica em 4 níveis: Contexto, Contêineres, Componentes e Código
+## Modelo C4: Mapas com Zoom Arquitetural
 
-Ênfase em rótulos explícitos: nome, tipo, tecnologia e responsabilidade em cada elemento
+- Criado por Simon Brown para simplificar a comunicação visual de sistemas [@brown2018visualising]
+- Estrutura hierárquica em 4 níveis: **Contexto, Contêineres, Componentes e Código**
+- Ênfase em rótulos explícitos: nome, tipo, tecnologia e responsabilidade em cada elemento
 
-Níveis 1 e 2 do Modelo C4
-Nível 1 — Contexto do Sistema: Foco nas personas e sistemas externos; ideal para públicos não técnicos
+---
 
-Nível 2 — Contêineres: Aplicações web, mobile, APIs, filas e bancos de dados implantáveis
+## Níveis 1 e 2 do Modelo C4
 
-Define fronteiras de execução, armazenamento e protocolos de comunicação
+- **Nível 1 — Contexto do Sistema:** Foco nas *personas* e sistemas externos; ideal para públicos não técnicos
+- **Nível 2 — Contêineres:** Aplicações web, mobile, APIs, filas e bancos de dados implantáveis
+- Define fronteiras de execução, armazenamento e protocolos de comunicação
 
-Níveis 3 e 4 do Modelo C4
-Nível 3 — Componentes: Agrupamentos lógicos internos a um contêiner (serviços, controladores, adaptadores)
+---
 
-Nível 4 — Código: Classes, interfaces e detalhes de implementação
+## Níveis 3 e 4 do Modelo C4
 
-Boa prática: Gerar o Nível 4 automaticamente via ferramentas, evitando manutenção manual
+- **Nível 3 — Componentes:** Agrupamentos lógicos internos a um contêiner (serviços, controladores, adaptadores)
+- **Nível 4 — Código:** Classes, interfaces e detalhes de implementação
+- **Boa prática:** Gerar o Nível 4 automaticamente via ferramentas, evitando manutenção manual
 
-Exemplo Estrutural no Modelo C4
+---
 
+## Exemplo Estrutural no Modelo C4
+
+```{mermaid}
 %%| label: fig-slides-c4
 %%| fig-cap: "Representação de Contêineres e integrações no Modelo C4."
 flowchart LR
@@ -99,34 +105,42 @@ flowchart LR
     User -->|"HTTPS"| SPA
     SPA -->|"JSON / REST"| API
     API -->|"SQL / TCP"| DB
+```
 
-Diagramas de Componentes (UML)
-Foco em modularidade, encapsulamento e substituibilidade [@fowler2003uml]
+---
 
-Oculta a implementação interna atrás de contratos explícitos na fronteira do módulo
+## Diagramas de Componentes (UML)
 
-Essencial para governança de dependências em sistemas modulares
+- Foco em **modularidade, encapsulamento e substituibilidade** [@fowler2003uml]
+- Oculta a implementação interna atrás de contratos explícitos na fronteira do módulo
+- Essencial para governança de dependências em sistemas modulares
 
-Interfaces Fornecidas e Requeridas (UML)
-Interface Fornecida (Lollipop): Serviços que o componente disponibiliza ao ambiente
+---
 
-Interface Requerida (Socket): Dependências externas exigidas pelo componente para operar
+## Interfaces Fornecidas e Requeridas (UML)
 
-Portas e Conectores: Acoplam contratos compatíveis sem expor detalhes internos
+- **Interface Fornecida (*Lollipop*):** Serviços que o componente disponibiliza ao ambiente
+- **Interface Requerida (*Socket*):** Dependências externas exigidas pelo componente para operar
+- **Portas e Conectores:** Acoplam contratos compatíveis sem expor detalhes internos
 
-Como Combinar as Três Notações na Prática
-C4 (Níveis 1 e 2): Alinhamento global de contexto, tecnologias e contêineres
+---
 
-Componentes UML / C4 (Nível 3): Contratos internos, portas e inversão de dependências
+## Como Combinar as Três Notações na Prática
 
-4+1 (Processos e Física): Concorrência, tolerância a falhas e topologia de implantação
+- **C4 (Níveis 1 e 2):** Alinhamento global de contexto, tecnologias e contêineres
+- **Componentes UML / C4 (Nível 3):** Contratos internos, portas e inversão de dependências
+- **4+1 (Processos e Física):** Concorrência, tolerância a falhas e topologia de implantação
 
-Trade-offs e Análise Comparativa
+---
+
+## Trade-offs e Análise Comparativa
+
 {{< include _trade-offs.md >}}
 
-Conclusão e Boas Práticas
-Escolha a notação pelo público-alvo e pela decisão arquitetural que precisa ser comunicada
+---
 
-Sempre inclua legenda, protocolos e responsabilidades nos diagramas
+## Conclusão e Boas Práticas
 
-Prefira Architecture-as-Code (Mermaid, PlantUML, Structurizr) para evitar documentação obsoleta
+- Escolha a notação pelo **público-alvo** e pela **decisão arquitetural** que precisa ser comunicada
+- Sempre inclua **legenda, protocolos e responsabilidades** nos diagramas
+- Prefira **Architecture-as-Code** (Mermaid, PlantUML, Structurizr) para evitar documentação obsoleta
