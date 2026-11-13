@@ -28,12 +28,12 @@ formatos:
   slides: true
   notebook:
     entregue: true
-    colab_url: "https://colab.research.google.com/github/IFPE-BeloJardim-ES/guia-arquitetura-de-software/blob/main/content/XX-notacoes-arquiteturais/notebook.ipynb"
+    colab_url: "https://colab.research.google.com/github/IFPE-BeloJardim-ES/guia-arquitetura-de-software/blob/main/content/04-notacoes-arquiteturais/notebook.ipynb"
   audio_notebooklm:
     entregue: true
-    url: "https://github.com/IFPE-BeloJardim-ES/guia-arquitetura-de-software/blob/main/content/XX-notacoes-arquiteturais/_trade-offs.md"
+    url: "https://github.com/IFPE-BeloJardim-ES/guia-arquitetura-de-software/blob/main/content/04-notacoes-arquiteturais/_trade-offs.md"
     transcricao: "Análise comparativa e trade-offs entre o Modelo 4+1, o Modelo C4 e Diagramas de Componentes UML."
   gem_gemini:
     entregue: true
-    url: "https://github.com/IFPE-BeloJardim-ES/guia-arquitetura-de-software/blob/main/content/XX-notacoes-arquiteturais/slides.qmd"
+    url: "https://github.com/IFPE-BeloJardim-ES/guia-arquitetura-de-software/blob/main/content/04-notacoes-arquiteturais/slides.qmd"
     instrucoes: "Especialista em modelagem visual de arquitetura de software, visões 4+1, C4 Model e UML."
